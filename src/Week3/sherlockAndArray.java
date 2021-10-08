@@ -5,10 +5,12 @@ import java.util.List;
 public class sherlockAndArray {
     static String balancedSums(List<Integer> arr) {
         int sum = 0;
+        // tinh tong tat ca phan tu
         for (int x : arr){
             sum += x;
         }
         int left = 0;
+        // tinh tong ve trai
         for (int x: arr){
             sum -= x;
             if(left == sum) {

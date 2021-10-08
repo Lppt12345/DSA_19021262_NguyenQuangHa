@@ -7,6 +7,7 @@ public class Pair {
     public static int pairs(int k, List<Integer> arr) {
         Collections.sort(arr);
         int i = 0, j = 1, count = 0;
+        // do tung cap so gan nhau nhat
         while (i < arr.size() && j < arr.size()) {
             if (arr.get(j) - arr.get(i) == k) {
                 j++;
