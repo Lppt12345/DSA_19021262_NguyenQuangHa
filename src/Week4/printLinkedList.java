@@ -12,6 +12,7 @@ public class printLinkedList {
             this.next = null;
         }
     }
+
     static void printLinkedList(SinglyLinkedListNode head) {
         SinglyLinkedListNode p = head;
         while (p != null){

@@ -10,6 +10,7 @@ public class insertNodeAtPosition {
             this.next = null;
         }
     }
+
     public static SinglyLinkedListNode insertNodeAtPosition(SinglyLinkedListNode llist, int data, int position) {
         SinglyLinkedListNode node = new SinglyLinkedListNode(data);
         if (position == 0) {

@@ -10,6 +10,7 @@ public class InsertTail {
             this.next = null;
         }
     }
+
     static SinglyLinkedListNode insertNodeAtTail (SinglyLinkedListNode head , int data){
         SinglyLinkedListNode node = new SinglyLinkedListNode(data);
         if (head == null) {

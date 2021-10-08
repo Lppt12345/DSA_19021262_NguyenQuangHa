@@ -10,7 +10,6 @@ public class CompareLists {
             this.next = null;
         }
     }
-
     static boolean compareLists(SinglyLinkedListNode head1, SinglyLinkedListNode head2) {
         SinglyLinkedListNode check1 = head1;
         SinglyLinkedListNode check2 = head2;

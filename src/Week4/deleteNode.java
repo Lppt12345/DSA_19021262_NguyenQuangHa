@@ -10,6 +10,7 @@ public class deleteNode {
             this.next = null;
         }
     }
+
     public static SinglyLinkedListNode deleteNode(SinglyLinkedListNode llist, int position) {
         if (position == 0){
             llist = llist.next;

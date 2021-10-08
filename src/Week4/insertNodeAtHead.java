@@ -10,6 +10,7 @@ public class insertNodeAtHead {
             this.next = null;
         }
     }
+
     static SinglyLinkedListNode insertNodeAtHead(SinglyLinkedListNode llist, int data) {
         SinglyLinkedListNode p = new SinglyLinkedListNode(data);
         SinglyLinkedListNode first = llist;

@@ -10,6 +10,7 @@ public class ReserveList {
             this.next = null;
         }
     }
+
     public static SinglyLinkedListNode reverse(SinglyLinkedListNode llist) {
         SinglyLinkedListNode node = llist;
         SinglyLinkedListNode tail = null , next;

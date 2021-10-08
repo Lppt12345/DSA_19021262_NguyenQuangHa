@@ -13,6 +13,7 @@ public class reversePrint {
             this.next = null;
         }
     }
+
     public static void reversePrint(SinglyLinkedListNode llist) {
         List <Integer> arr = new ArrayList<Integer>();
 
