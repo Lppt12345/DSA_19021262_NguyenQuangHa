@@ -23,7 +23,6 @@ public class insertNodeAtHead {
             return  llist;
         }
         // node.next = llist;
-        //
-        //        return node;
+        // return node;
     }
 }
