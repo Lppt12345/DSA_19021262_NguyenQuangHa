@@ -5,6 +5,7 @@ import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class BinarySearch {
+
     public static int binarySearch(int[] arr, int x) {
         int l = 0, r = arr.length - 1;
         while (l <= r) {

@@ -1,6 +1,5 @@
 package Week3;
 
-
 import java.util.*;
 
 public class ClosestNumbers {

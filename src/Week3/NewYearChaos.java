@@ -26,6 +26,7 @@ public class NewYearChaos {
         }
         System.out.println(count);
     }
+
     public static void main(String[] args) {
         List<Integer> list1 = List.of(2,1,5,3,4);
         minimumBribes(list1);

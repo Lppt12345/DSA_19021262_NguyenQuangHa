@@ -23,7 +23,6 @@ public class ThreeSum1 {
     // Do not instantiate.
     private ThreeSum1() {
     }
-
     /**
      * Prints to standard output the (i, j, k) with {@code i < j < k}
      * such that {@code a[i] + a[j] + a[k] == 0}.
