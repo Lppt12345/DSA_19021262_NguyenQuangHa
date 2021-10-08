@@ -5,7 +5,7 @@ public class printLinkedList {
 
     static class SinglyLinkedListNode {
         public int data;
-        public InsertTail.SinglyLinkedListNode next;
+        public SinglyLinkedListNode next;
 
         public SinglyLinkedListNode(int nodeData) {
             this.data = nodeData;
@@ -20,4 +20,5 @@ public class printLinkedList {
             p = p.next;
         }
     }
+
 }
