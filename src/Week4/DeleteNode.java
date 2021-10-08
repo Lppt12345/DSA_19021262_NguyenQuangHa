@@ -1,6 +1,6 @@
 package Week4;
 
-public class deleteNode {
+public class DeleteNode {
     static class SinglyLinkedListNode {
         public int data;
         public SinglyLinkedListNode next;

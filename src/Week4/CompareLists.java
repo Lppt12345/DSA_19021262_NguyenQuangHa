@@ -25,7 +25,8 @@ public class CompareLists {
         }
         else return true;
 
-//        SinglyLinkedListNode p1 = head1, p2 = head2;
+    }
+    //        SinglyLinkedListNode p1 = head1, p2 = head2;
 //        while (p1 != null || p2 != null) {
 //            if (p1 == null || p2 == null || p1.data != p2.data) {
 //                return false;
@@ -35,5 +36,4 @@ public class CompareLists {
 //        }
 //
 //        return true;
-    }
 }

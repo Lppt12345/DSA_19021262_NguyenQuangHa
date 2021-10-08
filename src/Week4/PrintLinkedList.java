@@ -1,6 +1,6 @@
 package Week4;
 
-public class printLinkedList {
+public class PrintLinkedList {
     // Complete the printLinkedList function below.
 
     static class SinglyLinkedListNode {

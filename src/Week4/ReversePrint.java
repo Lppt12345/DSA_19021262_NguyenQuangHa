@@ -3,7 +3,7 @@ package Week4;
 import java.util.ArrayList;
 import java.util.List;
 
-public class reversePrint {
+public class ReversePrint {
     static class SinglyLinkedListNode {
         public int data;
         public SinglyLinkedListNode next;

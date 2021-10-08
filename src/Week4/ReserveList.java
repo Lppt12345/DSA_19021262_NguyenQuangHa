@@ -3,7 +3,7 @@ package Week4;
 public class ReserveList {
     static class SinglyLinkedListNode {
         public int data;
-        public reversePrint.SinglyLinkedListNode next;
+        public SinglyLinkedListNode next;
 
         public SinglyLinkedListNode(int nodeData) {
             this.data = nodeData;
@@ -21,8 +21,7 @@ public class ReserveList {
             node = next ;       // cho node bang next
         }
         return tail;
-
-
+    }
 ////        Node Reverse(Node head) {
 //            if (head == null || head.next == null) {
 //                return head;
@@ -34,6 +33,5 @@ public class ReserveList {
 //
 //            return newHead;
 //        }
-    }
 
 }

@@ -1,6 +1,6 @@
 package Week4;
 
-public class insertNodeAtPosition {
+public class InsertNodeAtPosition {
     static class SinglyLinkedListNode {
         public int data;
         public SinglyLinkedListNode next;
