@@ -41,6 +41,7 @@ public class QueueusingTwoStack {
             }
             // dua num vao stack 2
             stack2.push(num);
+            // day stack 1 vao stack 2
             while (!stack1.empty()){
                 stack2.push(stack1.pop());
             }
