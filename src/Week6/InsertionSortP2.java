@@ -44,6 +44,8 @@ public class InsertionSortP2 {
                     int tmp = arr.get(j);
                     arr.set(j , arr.get(j-1));
                     arr.set(j-1, tmp);
+                }else {
+                    break;
                 }
             }
             printArray(arr);
