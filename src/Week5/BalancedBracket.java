@@ -12,22 +12,22 @@ public class BalancedBracket {
                     S.push(c);
                     break;
                 case ']':
-                    if (S.isEmpty() || S.pop() != ']'){
+                    if (S.isEmpty() || S.pop() != '['){
                         return "NO";
                     }
                     break;
                 case ')':
-                    if (S.isEmpty() || S.pop() != ')'){
+                    if (S.isEmpty() || S.pop() != '('){
                         return "NO";
                     }
-                    break;7
+                    break;
                 case '}':
-                    if (S.isEmpty() || S.pop() != '}'){
+                    if (S.isEmpty() || S.pop() != '{'){
                         return "NO";
                     }
                     break;
             }
         }
-        return S.isEmpty() ?  "YES" : "NO";
+        return (S.isEmpty()) ?  "YES" : "NO";
     }
 }

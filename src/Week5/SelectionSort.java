@@ -19,7 +19,7 @@ public class SelectionSort {
         for (int i = 0; i < a.length; i++){
             System.out.println(a[i]);
         }
-            long end = System.currentTimeMillis();
+        long end = System.currentTimeMillis();
         System.out.println((double)(end - start)/1000);
     }
 }
