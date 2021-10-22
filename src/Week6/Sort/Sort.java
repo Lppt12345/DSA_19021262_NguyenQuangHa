@@ -3,27 +3,35 @@ package Week6.Sort;
 import edu.princeton.cs.algs4.Insertion;
 import edu.princeton.cs.algs4.Merge;
 import edu.princeton.cs.algs4.Quick;
+import edu.princeton.cs.algs4.StdArrayIO;
 
 import java.util.Arrays;
 
 public class Sort {
     public static long insertionSortTime(Comparable[] a) {
-        long start = System.currentTimeMillis();
-//        Insertion.sort(a); dung thu vien
-        InsertionSort.sort(a);
-        return System.currentTimeMillis() - start;
+        long start = 0;
+        long end = 0;
+        start = System.currentTimeMillis();
+        Insertion.sort(a);
+        end = System.currentTimeMillis();
+        return end - start;
     }
     static long mergeSort(Comparable[] a) {
-        long start = System.currentTimeMillis();
-//        Merge.sort(a);
-
-        return System.currentTimeMillis() - start;
+        long start = 0;
+        long end = 0;
+        start = System.currentTimeMillis();
+        Merge.sort(a);
+        end = System.currentTimeMillis();
+        return end - start;
     }
 
     static long quickSort(Comparable[] a) {
-        long start = System.currentTimeMillis();
+        long start = 0;
+        long end = 0;
+        start = System.currentTimeMillis();
         Quick.sort(a);
-        return System.currentTimeMillis() - start;
+        end = System.currentTimeMillis();
+        return end - start;
     }
 
     public static void insertTest(int number, Integer [] arr){
@@ -31,10 +39,12 @@ public class Sort {
         long total = 0;
         long time = 0;
         for (int i = 1; i <=number ;i++){
-            time = insertionSortTime(Arrays.copyOf(arr,arr.length));
+            Integer [] test = Arrays.copyOf(arr,arr.length);
+            time = insertionSortTime(test);
             total += time;
             System.out.println("Chay thu lan thu " + i + "  " + time);
         }
+
         System.out.println("Total = " + total);
         double tb =  (double) total / number;
         System.out.println("Average = " + tb);
@@ -45,7 +55,8 @@ public class Sort {
         long total = 0;
         long time = 0;
         for (int i = 1; i <=number ;i++){
-            time = quickSort(Arrays.copyOf(arr,arr.length));
+            Integer [] test = Arrays.copyOf(arr,arr.length);
+            time = quickSort(test);
             total += time;
             System.out.println("Chay thu lan thu " + i + "  " + time);
         }
@@ -54,12 +65,14 @@ public class Sort {
         System.out.println("Average = " + tb);
     }
 
+
     public static void mergeTest(int number, Integer [] arr){
         System.out.println("Merge sort: ");
         long total = 0;
         long time = 0;
         for (int i = 1; i <=number ;i++){
-            time = mergeSort(Arrays.copyOf(arr,arr.length));
+            Integer [] test = Arrays.copyOf(arr,arr.length);
+            time = mergeSort(test);
             total += time;
             System.out.println("Chay thu lan thu " + i + "  " + time);
         }
@@ -67,29 +80,7 @@ public class Sort {
         double tb =  (double) total / number;
         System.out.println("Average = " + tb);
     }
-//    public static void insertTest(int number, Integer [] arr){
-//        System.out.println("Insertion sort: ");
-//        Integer [] test = arr;
-//        long time = 0;
-//        time = insertionSortTime(test);
-//        System.out.println("Lan " + number + " : " + time);
-//    }
-//
-//    public static void quickTest(int number, Integer [] arr){
-//        System.out.println("Quick sort: ");
-//        Integer [] test = arr;
-//        long time = 0;
-//        time = quickSort(test);
-//        System.out.println("Lan " + number + " : " + time);
-//    }
-//
-//    public static void mergeTest(int number, Integer [] arr){
-//        System.out.println("Merge sort: ");
-//        Integer [] test = arr;
-//        long time = 0;
-//        time = mergeSort(test);
-//        System.out.println("Lan " + number + " : " + time);
-//    }
+
     // test random
     public static  void testRandom(int number){
         System.out.println("TEST RANDOM:");
@@ -108,6 +99,7 @@ public class Sort {
     }
     // test sorted
     public static void testSorted(int number){
+        System.out.println("TEST SORTED:");
         Integer [] arr = GenerateArray.sortedIntegerArr();
         insertTest(number, arr);
         quickTest(number,arr);

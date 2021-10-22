@@ -1,0 +1,252 @@
+"C:\Program Files\Java\jdk-17\bin\java.exe" "-javaagent:D:\Program Files\EasyEDA\IntelliJ IDEA 2021.2.2\lib\idea_rt.jar=56442:D:\Program Files\EasyEDA\IntelliJ IDEA 2021.2.2\bin" -Dfile.encoding=UTF-8 -classpath D:\CTDL\out\production\CTDL;D:\CTDL\lib\algs4.jar Week6.Sort.Test
+TEST INPUT FROM FILE:lib/algs4-data/1Kints.txt
+Insertion sort: 
+Chay thu lan thu 1  13
+Chay thu lan thu 2  15
+Chay thu lan thu 3  0
+Chay thu lan thu 4  0
+Chay thu lan thu 5  0
+Chay thu lan thu 6  0
+Chay thu lan thu 7  0
+Chay thu lan thu 8  0
+Chay thu lan thu 9  0
+Chay thu lan thu 10  0
+Total = 28
+Average = 2.8
+Quick sort: 
+Chay thu lan thu 1  0
+Chay thu lan thu 2  0
+Chay thu lan thu 3  0
+Chay thu lan thu 4  0
+Chay thu lan thu 5  0
+Chay thu lan thu 6  0
+Chay thu lan thu 7  0
+Chay thu lan thu 8  0
+Chay thu lan thu 9  0
+Chay thu lan thu 10  0
+Total = 0
+Average = 0.0
+Merge sort: 
+Chay thu lan thu 1  0
+Chay thu lan thu 2  15
+Chay thu lan thu 3  0
+Chay thu lan thu 4  0
+Chay thu lan thu 5  0
+Chay thu lan thu 6  0
+Chay thu lan thu 7  0
+Chay thu lan thu 8  0
+Chay thu lan thu 9  0
+Chay thu lan thu 10  0
+Total = 15
+Average = 1.5
+################################################
+TEST INPUT FROM FILE:lib/algs4-data/2Kints.txt
+Insertion sort: 
+Chay thu lan thu 1  16
+Chay thu lan thu 2  16
+Chay thu lan thu 3  6
+Total = 38
+Average = 12.666666666666666
+Quick sort: 
+Chay thu lan thu 1  0
+Chay thu lan thu 2  0
+Chay thu lan thu 3  0
+Total = 0
+Average = 0.0
+Merge sort: 
+Chay thu lan thu 1  0
+Chay thu lan thu 2  16
+Chay thu lan thu 3  0
+Total = 16
+Average = 5.333333333333333
+################################################
+TEST INPUT FROM FILE:lib/algs4-data/4Kints.txt
+Insertion sort: 
+Chay thu lan thu 1  16
+Chay thu lan thu 2  31
+Chay thu lan thu 3  22
+Total = 69
+Average = 23.0
+Quick sort: 
+Chay thu lan thu 1  0
+Chay thu lan thu 2  0
+Chay thu lan thu 3  0
+Total = 0
+Average = 0.0
+Merge sort: 
+Chay thu lan thu 1  16
+Chay thu lan thu 2  0
+Chay thu lan thu 3  16
+Total = 32
+Average = 10.666666666666666
+################################################
+TEST INPUT FROM FILE:lib/algs4-data/8Kints.txt
+Insertion sort: 
+Chay thu lan thu 1  131
+Chay thu lan thu 2  107
+Chay thu lan thu 3  94
+Total = 332
+Average = 110.66666666666667
+Quick sort: 
+Chay thu lan thu 1  0
+Chay thu lan thu 2  0
+Chay thu lan thu 3  0
+Total = 0
+Average = 0.0
+Merge sort: 
+Chay thu lan thu 1  15
+Chay thu lan thu 2  0
+Chay thu lan thu 3  16
+Total = 31
+Average = 10.333333333333334
+################################################
+TEST INPUT FROM FILE:lib/algs4-data/16Kints.txt
+Insertion sort: 
+Chay thu lan thu 1  564
+Chay thu lan thu 2  470
+Chay thu lan thu 3  454
+Total = 1488
+Average = 496.0
+Quick sort: 
+Chay thu lan thu 1  0
+Chay thu lan thu 2  0
+Chay thu lan thu 3  0
+Total = 0
+Average = 0.0
+Merge sort: 
+Chay thu lan thu 1  16
+Chay thu lan thu 2  0
+Chay thu lan thu 3  15
+Total = 31
+Average = 10.333333333333334
+################################################
+TEST INPUT FROM FILE:lib/algs4-data/32Kints.txt
+Insertion sort: 
+Chay thu lan thu 1  2066
+Chay thu lan thu 2  2040
+Chay thu lan thu 3  1674
+Total = 5780
+Average = 1926.6666666666667
+Quick sort: 
+Chay thu lan thu 1  15
+Chay thu lan thu 2  7
+Chay thu lan thu 3  0
+Total = 22
+Average = 7.333333333333333
+Merge sort: 
+Chay thu lan thu 1  15
+Chay thu lan thu 2  0
+Chay thu lan thu 3  16
+Total = 31
+Average = 10.333333333333334
+################################################
+TEST RANDOM:
+Insertion sort: 
+Chay thu lan thu 1  771
+Chay thu lan thu 2  690
+Chay thu lan thu 3  677
+Chay thu lan thu 4  610
+Chay thu lan thu 5  605
+Chay thu lan thu 6  606
+Chay thu lan thu 7  609
+Total = 4568
+Average = 652.5714285714286
+Quick sort: 
+Chay thu lan thu 1  0
+Chay thu lan thu 2  15
+Chay thu lan thu 3  0
+Chay thu lan thu 4  0
+Chay thu lan thu 5  0
+Chay thu lan thu 6  16
+Chay thu lan thu 7  0
+Total = 31
+Average = 4.428571428571429
+Merge sort: 
+Chay thu lan thu 1  0
+Chay thu lan thu 2  16
+Chay thu lan thu 3  15
+Chay thu lan thu 4  0
+Chay thu lan thu 5  16
+Chay thu lan thu 6  0
+Chay thu lan thu 7  15
+Total = 62
+Average = 8.857142857142858
+################################################
+TEST REVERSE:
+Insertion sort: 
+Chay thu lan thu 1  1672
+Chay thu lan thu 2  1656
+Chay thu lan thu 3  1670
+Chay thu lan thu 4  1663
+Chay thu lan thu 5  1654
+Total = 8315
+Average = 1663.0
+Quick sort: 
+Chay thu lan thu 1  0
+Chay thu lan thu 2  10
+Chay thu lan thu 3  2
+Chay thu lan thu 4  0
+Chay thu lan thu 5  0
+Total = 12
+Average = 2.4
+Merge sort: 
+Chay thu lan thu 1  8
+Chay thu lan thu 2  0
+Chay thu lan thu 3  0
+Chay thu lan thu 4  0
+Chay thu lan thu 5  12
+Total = 20
+Average = 4.0
+################################################
+TEST SORTED:
+Insertion sort: 
+Chay thu lan thu 1  0
+Chay thu lan thu 2  0
+Chay thu lan thu 3  0
+Chay thu lan thu 4  0
+Chay thu lan thu 5  0
+Total = 0
+Average = 0.0
+Quick sort: 
+Chay thu lan thu 1  0
+Chay thu lan thu 2  0
+Chay thu lan thu 3  10
+Chay thu lan thu 4  2
+Chay thu lan thu 5  0
+Total = 12
+Average = 2.4
+Merge sort: 
+Chay thu lan thu 1  8
+Chay thu lan thu 2  0
+Chay thu lan thu 3  0
+Chay thu lan thu 4  0
+Chay thu lan thu 5  10
+Total = 18
+Average = 3.6
+################################################
+TEST EQUAL:
+Insertion sort: 
+Chay thu lan thu 1  0
+Chay thu lan thu 2  0
+Chay thu lan thu 3  0
+Chay thu lan thu 4  0
+Chay thu lan thu 5  0
+Total = 0
+Average = 0.0
+Quick sort: 
+Chay thu lan thu 1  3
+Chay thu lan thu 2  0
+Chay thu lan thu 3  0
+Chay thu lan thu 4  0
+Chay thu lan thu 5  0
+Total = 3
+Average = 0.6
+Merge sort: 
+Chay thu lan thu 1  8
+Chay thu lan thu 2  0
+Chay thu lan thu 3  0
+Chay thu lan thu 4  10
+Chay thu lan thu 5  0
+Total = 18
+Average = 3.6
+

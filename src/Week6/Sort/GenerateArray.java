@@ -7,7 +7,7 @@ import java.util.Collections;
 import java.util.Random;
 
 public class GenerateArray {
-    private static final int SIZE = 50000;
+    private static final int SIZE = 20000;
     // Doc tu file
     public static Integer[] inputFromFile(String path) {
         In in = new In(path);
@@ -25,6 +25,11 @@ public class GenerateArray {
         for (int i = 0; i < arr.length; i++) {
             arr[i] = a[i];
         }
+//        Integer[] arr = new Integer[SIZE];
+//        Random generator = new Random();
+//        for (int i = 0; i < SIZE; i++) {
+//            arr[i] = generator.nextInt();
+//        }
         return arr;
     }
     // Sap xep mang
@@ -69,9 +74,6 @@ public class GenerateArray {
     // Mang float bang nhau
     public static Float[] equalFloatArray(float value) {
         Float[] arr = new Float[SIZE];
-//        for (int i = 0; i < SIZE; i++) {
-//            arr[i] = value;
-//        }
         Arrays.fill(arr, value);
         return arr;
     }
