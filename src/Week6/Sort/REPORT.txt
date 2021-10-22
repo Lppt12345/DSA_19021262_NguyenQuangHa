@@ -1,4 +1,4 @@
-"C:\Program Files\Java\jdk-17\bin\java.exe" "-javaagent:D:\Program Files\EasyEDA\IntelliJ IDEA 2021.2.2\lib\idea_rt.jar=56442:D:\Program Files\EasyEDA\IntelliJ IDEA 2021.2.2\bin" -Dfile.encoding=UTF-8 -classpath D:\CTDL\out\production\CTDL;D:\CTDL\lib\algs4.jar Week6.Sort.Test
+
 TEST INPUT FROM FILE:lib/algs4-data/1Kints.txt
 Insertion sort: 
 Chay thu lan thu 1  13
