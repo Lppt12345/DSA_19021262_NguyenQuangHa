@@ -5,32 +5,29 @@ import java.util.List;
 public class Quicksort1_Partition {
     public static List<Integer> quickSort(List<Integer> arr) {
         int pivot = 0;
-        int i = pivot;
-        int j = arr.size();
+        int left = pivot + 1;
+        int right = arr.size() - 1;
 
         while (true) {
-            while (arr.get(++i) < arr.get(pivot)) {
-                if (i == arr.size()) {
-                    break;
-                }
+            while (arr.get(left) < arr.get(pivot) && left <= right) {
+               left ++;  // tim phan tu <= arr[pivot]
             }
-            while (arr.get(--j) > arr.get(pivot)) {
-                if (j == 0) {
-                    break;
-                }
+            while (arr.get(right) > arr.get(pivot) && right >= left) {
+                right --;  // tim phan tu >= arr[pivot]
             }
-            if (i >= j) {
+            if (left >= right) {
                 break;
             }
-            int tmp = arr.get(i);
-            arr.set(i, arr.get(j));
-            arr.set(j, tmp);
+            int tmp = arr.get(left);
+            arr.set(left, arr.get(right));
+            arr.set(right, tmp);
+            left ++ ; // tang left vi da xet
+            right --; //  giam right
         }
 
-        int tmp = arr.get(j);
-        arr.set(j, arr.get(pivot));
+        int tmp = arr.get(right);
+        arr.set(right, arr.get(pivot));
         arr.set(pivot, tmp);
-
         return arr;
     }
 }
