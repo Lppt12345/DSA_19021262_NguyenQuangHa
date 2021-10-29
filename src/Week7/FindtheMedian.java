@@ -5,7 +5,7 @@ import java.util.List;
 
 public class FindtheMedian {
     public static int findMedian(List<Integer> arr) {
-        Collections.sort(arr);
+        Collections.sort(arr);     // NlogN
         return arr.get(arr.size() / 2);
     }
 }
