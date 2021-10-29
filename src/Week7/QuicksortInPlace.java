@@ -1,32 +1,33 @@
 package Week7;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class QuicksortInPlace {
-    static int partition(int arr[], int lo, int hi) {
-        int pivot = arr[hi];
-        int i = lo - 1;
-        for (int j = lo; j <= hi; j++) {
+    static int partition(int arr[], int low, int high) {
+        int pivot = arr[high];
+        int i = low;
+        for (int j = low; j < high; j++) {
             if (arr[j] <= pivot) {
-                i++;
                 int tmp = arr[i];
                 arr[i] = arr[j];
                 arr[j] = tmp;
+                i ++;
             }
         }
-        print(arr);
+        int tmp = arr[i];
+        arr[i] = arr[high];
+        arr[high] = tmp;
         return i;
     }
 
-    static void sort(int[] arr, int lo, int hi) {
-        if (lo >= hi) {return;}
-        int mid = partition(arr, lo, hi);
-        sort(arr, lo, mid - 1);
-        sort(arr, mid + 1, hi);
-    }
-
-    static void sort(int arr[]) {
-        sort(arr, 0, arr.length - 1);
+    public static void sort(int[] arr, int low, int high) {
+        if (low >= high) {return;}
+        int pi = partition(arr, low, high);
+        print(arr);
+        sort(arr, low, pi - 1);
+        sort(arr, pi + 1, high);
     }
 
     static void print(int[] arr) {
@@ -44,9 +45,6 @@ public class QuicksortInPlace {
             arr[i] = scan.nextInt();
         }
         scan.close();
-        sort(arr);
-        for (int i = 0; i < arr.length; i++) {
-            System.out.print(arr[i] + " ");
-        }
+        sort(arr, 0 , n -1);
     }
 }
