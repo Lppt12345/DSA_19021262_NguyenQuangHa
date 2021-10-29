@@ -21,8 +21,8 @@ public class Quicksort1_Partition {
             int tmp = arr.get(left);
             arr.set(left, arr.get(right));
             arr.set(right, tmp);
-            left ++ ; // tang left vi da xet
-            right --; //  giam right
+//          left ++ ; // tang left vi da xet
+//          right --; //  giam right
         }
 
         int tmp = arr.get(right);
