@@ -34,11 +34,13 @@ public class JavaSort {
         @Override
         public int compare(Student s1, Student s2) {
             if (s1.getCgpa() !=  s2.getCgpa()) {
+                // Sap xep cgpa tu lon den be neu muon nguoc lai thi doi 1:-1
                 return s1.getCgpa() > s2.getCgpa() ? -1 : 1;
             }
             if (s1.getFname() != s2.getFname()){
                 return s1.getFname().compareTo(s2.getFname());
             }
+            // xet ID theo gia tri tang dan
             return s1.getId() - s2.getId();
         }
     }
