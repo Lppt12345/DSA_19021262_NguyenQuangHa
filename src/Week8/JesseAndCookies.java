@@ -20,8 +20,7 @@ public class JesseAndCookies {
             // remove element nem ngoai le poll vs peek thi ko
             int a = queue.poll();
             int b = queue.poll();
-            int c = a + b * 2;
-            queue.add(c);
+            queue.add(a + b * 2);
             count ++;
         }
         return count;
