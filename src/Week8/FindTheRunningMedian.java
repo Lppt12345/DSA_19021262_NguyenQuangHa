@@ -17,6 +17,7 @@ public class FindTheRunningMedian {
         double prev = (double) a.get(0);
         int i = 1;
         result.add(prev);
+
         while (i < N) {
             // Neu lon hon thi xep no vao nua sau (minPQ: cac so lon hon no ) be hon xep vao nua truoc (maxPQ: cac so be hon no)
             if (a.get(i) >= prev){
