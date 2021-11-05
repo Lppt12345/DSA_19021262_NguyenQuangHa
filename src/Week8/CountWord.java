@@ -33,7 +33,6 @@ public class CountWord {
             i = j;
         }
     }
-    public void
 
     public static void main (String [] args){
         CountWord test = new CountWord();
