@@ -14,36 +14,33 @@ public class FindTheRunningMedian {
         Queue<Integer> maxPQ = new PriorityQueue<>(N/2 + 1, Collections.reverseOrder());
         Queue<Integer> minPQ = new PriorityQueue<>(N/2 + 1);
         maxPQ.add(a.get(0));
-        double prev = (double) a.get(0);
+        double prevMedian = (double) a.get(0);
         int i = 1;
-        result.add(prev);
+        result.add(prevMedian);
 
         while (i < N) {
             // Neu lon hon thi xep no vao nua sau (minPQ: cac so lon hon no ) be hon xep vao nua truoc (maxPQ: cac so be hon no)
-            if (a.get(i) >= prev){
+            if (a.get(i) >= prevMedian){
                 minPQ.add(a.get(i));
                 i++;
             }else {
                 maxPQ.add(a.get(i));
                 i++;
             }
-
             // Can doi de dam bao 2 day luon chenh nhau max <= 1
             if (maxPQ.size() > minPQ.size()){
                 minPQ.add(maxPQ.remove());
             }else if (minPQ.size() > maxPQ.size()){
                 maxPQ.add(minPQ.remove());
             }
-
             if (maxPQ.size() > minPQ.size()) {
-                prev = maxPQ.peek();
+                prevMedian = maxPQ.peek();
             } else if (maxPQ.size() < minPQ.size()) {
-                prev = minPQ.peek();
+                prevMedian = minPQ.peek();
             } else {
-                prev = (maxPQ.peek() + minPQ.peek()) / (double) 2;
+                prevMedian = (maxPQ.peek() + minPQ.peek()) / (double) 2;
             }
-
-            result.add(prev);
+            result.add(prevMedian);
         }
         return result;
     }
