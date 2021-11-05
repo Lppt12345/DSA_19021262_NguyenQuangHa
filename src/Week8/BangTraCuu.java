@@ -47,7 +47,7 @@ public class BangTraCuu {
         int i = 1;
         for (String show : allWord){
             Integer count = test.data.get(show);
-            System.out.println("No " + i + ": " + show + " |  xuat hien: " + count);
+            System.out.println("No " + i + " | " + show + " |  xuat hien: " + count);
             i++;
         }
     }
