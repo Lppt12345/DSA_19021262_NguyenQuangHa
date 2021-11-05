@@ -1,21 +1,17 @@
-import java.io.*;
 import java.util.*;
-import java.text.*;
-import java.math.*;
-import java.util.regex.*;
 
 class Student{
-    private int token;
+    private int ID;
     private String fname;
     private double cgpa;
     public Student(int id, String fname, double cgpa) {
         super();
-        this.token = id;
+        this.ID = id;
         this.fname = fname;
         this.cgpa = cgpa;
     }
-    public int getToken() {
-        return token;
+    public int getID() {
+        return ID;
     }
     public String getFname() {
         return fname;
@@ -39,10 +35,10 @@ class StudentComparator implements Comparator<Student> {
         if (s1.getFname().compareTo(s2.getFname()) > 0) {
             return 1;
         }
-        if (s1.getToken() < s2.getToken()) {
+        if (s1.getID() < s2.getID()) {
             return -1;
         }
-        if (s1.getToken() > s2.getToken()) {
+        if (s1.getID() > s2.getID()) {
             return 1;
         }
         return 0;
