@@ -2,7 +2,8 @@ package Week9;
 
 import java.util.Scanner;
 
-public class InorderTraversal {
+
+public class PreorderTraversal {
     static class Node {
         Node left;
         Node right;
@@ -14,14 +15,13 @@ public class InorderTraversal {
             right = null;
         }
     }
-
-    public static void inOrder(Node root) {
+    public static void preOrder(Node root) {
         if (root == null) {
             return;
         }
-        inOrder(root.left);
         System.out.print(root.data + " ");
-        inOrder(root.right);
+        preOrder(root.left);
+        preOrder(root.right);
     }
 
     public static Node insert(Node root, int data) {
@@ -49,6 +49,6 @@ public class InorderTraversal {
             root = insert(root, data);
         }
         scan.close();
-        inOrder(root);
+        preOrder(root);
     }
 }

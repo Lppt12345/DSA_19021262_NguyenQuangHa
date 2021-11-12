@@ -1,8 +1,10 @@
 package Week9;
 
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Scanner;
 
-public class InorderTraversal {
+public class LevelOrderTraversal {
     static class Node {
         Node left;
         Node right;
@@ -15,13 +17,19 @@ public class InorderTraversal {
         }
     }
 
-    public static void inOrder(Node root) {
-        if (root == null) {
-            return;
+    public static void levelOrder(Node root) {
+        Queue<Node> queue = new LinkedList<>();
+        queue.add(root);
+        while (!queue.isEmpty()) {
+            Node temp = queue.poll();
+            System.out.print(temp.data + " ");
+            if (temp.left != null) {
+                queue.add(temp.left);
+            }
+            if (temp.right != null) {
+                queue.add(temp.right);
+            }
         }
-        inOrder(root.left);
-        System.out.print(root.data + " ");
-        inOrder(root.right);
     }
 
     public static Node insert(Node root, int data) {
@@ -49,6 +57,6 @@ public class InorderTraversal {
             root = insert(root, data);
         }
         scan.close();
-        inOrder(root);
+        levelOrder(root);
     }
 }
