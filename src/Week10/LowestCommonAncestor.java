@@ -28,6 +28,7 @@ public class LowestCommonAncestor {
         }
         return node;
     }
+
     public static Node lca (Node root, int data1, int data2){
         if (root.data > data1 && root.data > data2){
             return lca (root.left, data1 , data2);

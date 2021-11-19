@@ -23,6 +23,7 @@ public class BSTInsertion {
         preOrder(root.left);
         preOrder(root.right);
     }
+
     public static Node insert (Node node , int data){
         if (node == null) {
             return new Node(data);

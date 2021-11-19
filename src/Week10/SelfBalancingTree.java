@@ -8,8 +8,6 @@ public class SelfBalancingTree {
         Node right;	//Right child
     }
 
-
-
     static Node insert(Node root,int val) {
         if(root == null) {
             root = new Node();
@@ -17,12 +15,14 @@ public class SelfBalancingTree {
             root.ht = setHeight(root);
             return root;
         }
+        // Tim vi tri can chen
         if(val <= root.val) {
             root.left = insert(root.left, val);
         }
         else if (val > root.val) {
             root.right = insert(root.right, val);
         }
+        // Check cân b?ng ng??c l?i t? node chèn
         int balance = height(root.left) - height(root.right);
 
         if(balance > 1) {
@@ -66,14 +66,14 @@ public class SelfBalancingTree {
         newRoot.ht = setHeight(newRoot);
         return newRoot;
     }
-
+    // lay chieu cao cua 1 node
     private static int height(Node root) {
         if(root == null)
             return -1;
         else
             return root.ht;
     }
-
+    // Set chieu cao cho node
     private static int setHeight(Node root) {
         if(root == null) {
             return -1;
