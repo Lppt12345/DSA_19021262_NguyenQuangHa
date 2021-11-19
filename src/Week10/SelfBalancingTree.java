@@ -1,7 +1,7 @@
 package Week10;
 
 public class SelfBalancingTree {
-    class Node{
+    static class Node{
         int val;	//Value
         int ht;		//Height
         Node left;	//Left child
