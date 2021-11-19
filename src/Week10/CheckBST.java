@@ -17,7 +17,6 @@ public class CheckBST {
         return checkBST(root, Integer.MIN_VALUE, Integer.MAX_VALUE);
     }
 
-
     static boolean checkBST(Node root, int min, int max) {
         if (root == null) return true;
 
