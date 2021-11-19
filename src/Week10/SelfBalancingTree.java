@@ -1,14 +1,15 @@
 package Week10;
 
 public class SelfBalancingTree {
-    /* Class node is defined as :
-class Node
-    int val;	//Value
-    int ht;		//Height
-    Node left;	//Left child
-    Node right;	//Right child
+    class Node{
+        int val;	//Value
+        int ht;		//Height
+        Node left;	//Left child
+        Node right;	//Right child
+    }
 
-*/
+
+
     static Node insert(Node root,int val) {
         if(root == null) {
             root = new Node();
