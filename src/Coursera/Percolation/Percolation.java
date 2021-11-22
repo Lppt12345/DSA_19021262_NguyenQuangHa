@@ -7,8 +7,8 @@ public class Percolation {
     private final int size;
     private boolean[][] grid;
     private int countOpen;
-    private int top;
-    private int bottom;
+    private final int top;
+    private final int bottom;
     private final WeightedQuickUnionUF wqu;
 
     // creates n-by-n grid, with all sites initially blocked
@@ -25,7 +25,7 @@ public class Percolation {
         // duoi n * n ; tren n*n +1
         this.wqu = new WeightedQuickUnionUF(n * n + 2);
     }
-
+    // tim vi tri trong mang 1 chieu
     private int position(int row, int col) {
         return (row - 1) * size + col - 1;
     }
@@ -55,22 +55,22 @@ public class Percolation {
                 wqu.union(pos, pos + 1);
             }
         }
-        // lien ket no vs bottom
+        // lien ket no vs top
         if (row == 1) {
-            wqu.union(pos, bottom);
-        }
-        // lk vs top
-        if (row == size) {
             wqu.union(pos, top);
         }
+        // lk vs bottom
+        if (row == size) {
+            wqu.union(pos, bottom);
+        }
         // Lien ket no vs cai tren no
-        if (row > 1 && row < size) {
+        if (row >= 1 && row < size) {
             if (isOpen(row + 1, col)) {
                 wqu.union(pos, pos + size);
             }
         }
         // Lien ket no vs cai duoi no
-        if (row > 1 && row < size) {
+        if (row > 1 && row <=  size) {
             if (isOpen(row - 1, col)) {
                 wqu.union(pos, pos - size);
             }
@@ -90,11 +90,11 @@ public class Percolation {
         if (!isValid(row, col, this.size)) {
             throw new IllegalArgumentException("Hang cot khong hop le");
         }
-        if (!isOpen(row, col)) {
-            return false;
-        }
         int pos = position(row, col);
-        return wqu.find(pos) == wqu.find( top);
+        if (isOpen(row, col) && (wqu.find(pos) == wqu.find(top))) {
+            return true;
+        }
+        return false;
     }
 
     // returns the number of open sites
@@ -119,7 +119,7 @@ public class Percolation {
 
     // test client (optional)
     public static void main(String[] args) {
-        int n = 4;
+        int n = 3;
         Percolation p = new Percolation(n);
         while (!p.percolates()) {
             int row = StdRandom.uniform(0, n) + 1;
@@ -128,7 +128,7 @@ public class Percolation {
             p.open(row, col);
             for (int i = 1; i <= n; i++) {
                 for (int j = 1; j <= n; j++) {
-                    System.out.println("hang " + i + " va cot" + j + " isOPen ? : " + p.isOpen(i, j)
+                    System.out.println("hang " + i + " va cot " + j + " isOPen ? : " + p.isOpen(i, j)
                             + "  " + p.isFull(i, j) + "  " + p.percolates() + " " + p.position(i, j));
                 }
             }
