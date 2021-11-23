@@ -1,14 +1,16 @@
-//package Coursera.CollinearPoints;
+package Coursera.CollinearPoints;
+
 import edu.princeton.cs.algs4.In;
 import edu.princeton.cs.algs4.StdDraw;
 import edu.princeton.cs.algs4.StdOut;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 
 public class FastCollinearPoints {
-    private final ArrayList<LineSegment> line = new ArrayList<>() ;
+    private final ArrayList<LineSegment> line = new ArrayList<>();
 
     // Tim tat ca doan thang chua 4 diem
     public FastCollinearPoints(Point[] points) {
@@ -25,7 +27,7 @@ public class FastCollinearPoints {
             Comparator<Point> sort = clone[i].slopeOrder();
             Arrays.sort(clone, sort);
             int j = 0;
-            while(j  <= n - 3 ) {
+            while (j <= n - 3) {
                 if (sort.compare(clone[j], clone[j + 1]) == 0
                         && sort.compare(clone[j], clone[j + 2]) == 0
                 ) {
@@ -40,8 +42,8 @@ public class FastCollinearPoints {
                         line.add(lineSegment);
                     }
                     j += 3;
-                }else {
-                    j ++;
+                } else {
+                    j++;
                 }
             }
         }

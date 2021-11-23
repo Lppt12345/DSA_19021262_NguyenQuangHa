@@ -1,4 +1,4 @@
-//package Coursera.Percolation;
+package Coursera.Percolation;
 
 import edu.princeton.cs.algs4.StdRandom;
 import edu.princeton.cs.algs4.WeightedQuickUnionUF;
@@ -25,6 +25,7 @@ public class Percolation {
         // duoi n * n ; tren n*n +1
         this.wqu = new WeightedQuickUnionUF(n * n + 2);
     }
+
     // tim vi tri trong mang 1 chieu
     private int position(int row, int col) {
         return (row - 1) * size + col - 1;
@@ -70,7 +71,7 @@ public class Percolation {
             }
         }
         // Lien ket no vs cai duoi no
-        if (row > 1 && row <=  size) {
+        if (row > 1 && row <= size) {
             if (isOpen(row - 1, col)) {
                 wqu.union(pos, pos - size);
             }

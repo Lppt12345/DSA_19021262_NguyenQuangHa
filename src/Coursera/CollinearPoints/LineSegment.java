@@ -1,4 +1,4 @@
-//package Coursera.CollinearPoints;
+package Coursera.CollinearPoints;
 
 public class LineSegment {
     private final Point p;

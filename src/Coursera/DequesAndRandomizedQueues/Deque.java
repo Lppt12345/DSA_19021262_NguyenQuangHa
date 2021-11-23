@@ -1,4 +1,4 @@
-//package Coursera.DequesAndRandomizedQueues;
+package Coursera.DequesAndRandomizedQueues;
 
 import java.util.Iterator;
 import java.util.NoSuchElementException;
@@ -8,40 +8,41 @@ public class Deque<Item> implements Iterable<Item> {
     private Node first;
     private Node last;
 
-    private class Node{
+    private class Node {
         Item item;
         Node prev;
         Node next;
     }
 
     // construct an empty deque
-    public Deque(){
+    public Deque() {
         this.first = null;
-        this.last =  null;
+        this.last = null;
         nItem = 0;
     }
 
     // is the deque empty?
-    public boolean isEmpty(){
+    public boolean isEmpty() {
         return nItem == 0;
     }
 
     // return the number of items on the deque
-    public int size(){
+    public int size() {
         return nItem;
     }
+
     // Kiem tra Item
-    private boolean isValidItem(Item item){
-        if (item == null){
-            return  false;
+    private boolean isValidItem(Item item) {
+        if (item == null) {
+            return false;
         }
         return true;
     }
 
     // add the item to the front
-    public void addFirst(Item item){
+    public void addFirst(Item item) {
         // In ra neu ko co item hop le
-        if (!isValidItem(item)){
+        if (!isValidItem(item)) {
             throw new NullPointerException("Item add vao bi null");
         }
         // Tao clone cua first roi cho frist la 1 Node moi
@@ -60,9 +61,9 @@ public class Deque<Item> implements Iterable<Item> {
     }
 
     // add the item to the back
-    public void addLast(Item item){
+    public void addLast(Item item) {
         // Check dau vao
-        if (!isValidItem(item)){
+        if (!isValidItem(item)) {
             throw new NullPointerException("Item add vao bi null");
         }
         // Tao clone cua last roi cho last gia tri moi
@@ -81,49 +82,51 @@ public class Deque<Item> implements Iterable<Item> {
     }
 
     // remove and return the item from the front
-    public Item removeFirst(){
-        if (isEmpty() || first == null){
+    public Item removeFirst() {
+        if (isEmpty() || first == null) {
             throw new NoSuchElementException("Loi khong thay phan tu nao");
         }
         Item tmp = first.item;
         // Gan first cho 1 phia sau no
         first = first.next;
         // Xoa bo phan tu dau
-        if (nItem - 1 == 0){
+        if (nItem - 1 == 0) {
             last = null;
             first = null;
-        }else {
+        } else {
             first.prev = null;
         }
-        nItem --;
+        nItem--;
         return tmp;
     }
 
     // remove and return the item from the back
-    public Item removeLast(){
-        if (isEmpty() || first == null){
+    public Item removeLast() {
+        if (isEmpty() || first == null) {
             throw new NoSuchElementException("Loi khong thay phan tu nao");
         }
         Item tmp = last.item;
         // Cho no len 1 buoc
         last = last.prev;
         // Xoa bo phan tu dau
-        if (nItem - 1 == 0){
+        if (nItem - 1 == 0) {
             first = null;
             last = null;
-        }else {
+        } else {
             last.next = null;
         }
-        nItem --;
+        nItem--;
         return tmp;
     }
 
     // return an iterator over items in order from front to back
-    public Iterator<Item> iterator(){
+    public Iterator<Item> iterator() {
         return new ItemIterator();
     }
+
     private class ItemIterator implements Iterator<Item> {
         private Node cur = first;
+
         @Override
         public boolean hasNext() {
             return cur != null;
@@ -139,13 +142,13 @@ public class Deque<Item> implements Iterable<Item> {
 
         @Override
         public void remove() {
-            throw  new UnsupportedOperationException();
+            throw new UnsupportedOperationException();
         }
     }
 
 
     // unit testing (required)
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Deque<Integer> test = new Deque<Integer>();
         System.out.println(test.isEmpty());
         test.addLast(10);

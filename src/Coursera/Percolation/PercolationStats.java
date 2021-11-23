@@ -1,4 +1,4 @@
-//package Coursera.Percolation;
+package Coursera.Percolation;
 
 import edu.princeton.cs.algs4.StdRandom;
 import edu.princeton.cs.algs4.StdStats;
