@@ -38,7 +38,7 @@ public class MissingNumber {
         Collections.sort(result);
         return result;
     }
-
+    // sort
     public static List<Integer> missingNumbers2(List<Integer> arr, List<Integer> brr) {
         ArrayList<Integer> result = new ArrayList<>();
         // 2nlogn
@@ -53,6 +53,28 @@ public class MissingNumber {
             } else {
                 i++;
             }
+        }
+        return result;
+    }
+    // Counting sort
+    public static List<Integer> missingNumbers3(List<Integer> arr, List<Integer> brr) {
+        List<Integer> a = new ArrayList<>();
+        List<Integer> result = new ArrayList<>();
+        for (int i = 0; i < 100; i++) a.add(0);
+        int min = brr.get(0);
+        for (Integer i : brr){
+            if (i < min){
+                min = i;
+            }
+        }
+        for (Integer i : brr) {
+            a.set(i - min, a.get(i - min) + 1);
+        }
+        for (Integer i : arr){
+            a.set(i - min, a.get(i - min) - 1);
+        }
+        for (int i = 0; i < 100; i++){
+            if (a.get(i) != 0) result.add(i + min);
         }
         return result;
     }
